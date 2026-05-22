@@ -46,3 +46,9 @@ module "ssm-parm" {
   iot_endpoint    = module.iot.iot_endpoint
 }
 
+# Create the S3 Bucketfor firmware.
+module "storage" {
+  source       = "./modules/storage"
+  env          = var.env
+  project_name = var.project_name
+}

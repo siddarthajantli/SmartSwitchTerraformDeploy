@@ -22,7 +22,7 @@ resource "aws_codepipeline" "pipeline" {
 
       configuration = {
         ConnectionArn    = var.github_connection_arn
-        FullRepositoryId = "siddarthajantli/SmartSwitchTerraformDeploy"
+        FullRepositoryId = "siddarthajantli/SmartSwitchDWROTADeploy"
         BranchName       = var.github_branch
         DetectChanges    = "true"
       }
