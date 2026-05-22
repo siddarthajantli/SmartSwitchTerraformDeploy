@@ -1,5 +1,5 @@
 env          = "dev"
-project_name = "SmartWaterPumpSwitch"
+project_name = "smart-water-pump-switch"
 aws_region   = "ap-south-1"
 # use_lockfile = true
 # thing_name = "SmartWaterPumpSwitch-dev-thing"
