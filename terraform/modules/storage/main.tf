@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "public_bucket" {
-  bucket = "${var.project_name}_${var.env}_public_bucket"
+  bucket = "${var.project_name}-${var.env}-public-bucket"
 
   tags = {
     Environment = var.env
