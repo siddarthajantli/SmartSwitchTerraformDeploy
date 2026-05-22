@@ -42,4 +42,5 @@ jobs:
         run:  terraform plan -var-file="envs/dev/dev.tfvars"
 
       - name: Terraform Apply
-        run: terraform apply -var-file="envs/dev/dev.tfvars" --auto-approve
+        #run: terraform apply -var-file="envs/dev/dev.tfvars" --auto-approve
+        run: terraform destroy -var-file="envs/dev/dev.tfvars" --auto-approve
