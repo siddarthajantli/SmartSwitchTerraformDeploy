@@ -17,7 +17,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: terraform/envs/dev
+        working-directory: terraform
 
     steps:
       - name: Checkout
@@ -33,10 +33,13 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        run: terraform init
+        run:  terraform init -backend-config="backend/dev.hcl"
+      
+      - name: Terraform Format
+        run:   terraform fmt -recursive
 
       - name: Terraform Plan
-        run: terraform plan
+        run:  terraform plan -var-file="envs/dev/dev.tfvars"
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        run: terraform apply -var-file="envs/dev/dev.tfvars" --auto-approve

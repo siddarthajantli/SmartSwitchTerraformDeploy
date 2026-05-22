@@ -1,0 +1,9 @@
+env          = "dev"
+project_name = "SmartWaterPumpSwitch"
+aws_region   = "ap-south-1"
+# use_lockfile = true
+# thing_name = "SmartWaterPumpSwitch-dev-thing"
+firmware_bucket        = "SmartWaterPumpSwitch-dev-S3"
+cert_bucket_name       = "iot-dwr-cert-s3"
+github_branch          = "main"
+codebuild_project_name = "SmartWaterPumpSwitch-Deployment"
